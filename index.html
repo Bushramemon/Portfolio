@@ -1,87 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bushra Memon | Computer Science Teacher </title>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f9f9f9;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #ffffff);
       color: #333;
     }
+
     header {
-      background: #007acc;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
       color: white;
-      padding: 20px;
+      padding: 50px 20px;
       text-align: center;
+      animation: fadeInDown 1s ease-out;
     }
+
     section {
-      padding: 20px;
-    }
-    .project {
-      margin-bottom: 15px;
-      border: 1px solid #ddd;
-      padding: 15px;
-      border-radius: 6px;
+      max-width: 900px;
+      margin: 40px auto;
       background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1s ease-out;
     }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+
+    .button {
+      display: inline-block;
+      background: linear-gradient(135deg, #43cea2, #185a9d);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #34e89e, #0f3443);
+    }
+
+    iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
     footer {
       text-align: center;
-      padding: 10px;
-      background: #f1f1f1;
+      padding: 20px;
       font-size: 14px;
+      color: #888;
+      margin-top: 40px;
+      animation: fadeIn 2s ease-in;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Bushra</h1>
-    <p>Computer Science Teacher | Python, Pandas, NumPy</p>
+    <h1>Hi, I'm Bushra</h1>
+    <p>Computer Science Teacher • Python Developer • Learner</p>
   </header>
 
   <section>
-    <h2> Projects</h2>
+    <h1>Projects</h1>
+    <h2>🌤️ Weather Forecasting Project</h2>
+    <p>This project uses machine learning (TensorFlow) to predict daily temperatures using past weather data.</p>
+    <a href="https://github.com/Bushramemon/Weather_forcasting" class="button" target="_blank">View on GitHub</a>
+  </section>
 
-    <div class="project">
-      <h3>Weather Forecasting Using TensorFlow</h3>
-      <p> Trained a ML model to predict the weather forecasting based on previous data using Tensorflow,windowing and normalization.</p>
-      <a href="https://github.com/Bushramemon/Weather_forcasting">View on GitHub</a>
-   
-    </div>
-
-    <div class="project">
-      <h3>Email Spam Detector</h3>
-      <p>Trained a Machine Learning model that can detect whether an email is spam or not.</p>
-      <a href="https://github.com/Bushramemon/Email_spam_detector">View on GitHub</a>
-    </div>
-
-    <div class="project">
-      <h3>Student Performance Predictor</h3>
-      <p>Trained a model to learn the relationship between study hours and score and Predicted student score based on study hours.</p>
-      <a href="https://github.com/Bushramemon/student_performance_predictor>View on GitHub</a>
-    </div>
-    
-
-    <!-- Add more projects as you like -->
+<section>
+    <h2> Weather Forecasting Project</h2>
+    <p>This project uses machine learning (TensorFlow) to predict daily temperatures using past weather data.</p>
+    <a href="https://github.com/Bushramemon/Weather_forcasting" class="button" target="_blank">View on GitHub</a>
   </section>
 
   <section>
-    <h2>Video Tutorials (Coming Soon)</h2>
-    <p>I'll be uploading beginner-friendly tutorials on Python, Pandas, and project walkthroughs. Stay tuned!</p>
+    <h2>Email_Spam_detector</h2>
+    <p>Trained a Machine Learning model that can detect whether an email is spam or not .</p>
+    <a href="https://github.com/Bushramemon/Email_spam_detector" class="button" target="_blank">View on GitHub</a>
   </section>
+  
+<section>
+    <h2>Student Performance Predictort</h2>
+    <p>Trained a model to learn the relationship between study hours and score and Predicted student score based on study hours. .</p>
+    <a href="https://github.com/Bushramemon/student_performance_predictor" class="button" target="_blank">View on GitHub</a>
+  </section>
+  
+  
 
+
+
+  
   <section>
-    <h2>Contact</h2>
-    <p>Email:bushramemon352@gmail.com.com</p>
-    <p>GitHub: <a href="https://github.com/Bushramemon">github.com/Bushramemon</a></p>
+    <h2>🎥 Tutorial Video</h2>
+    <p>Watch how this project works:</p>
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
   </section>
 
   <footer>
-    &copy; 2025 Bushra. All rights reserved.
+    &copy; 2025 Bushra
   </footer>
 
 </body>
 </html>
+
+
+
+
