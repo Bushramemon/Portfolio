@@ -97,61 +97,14 @@
         padding: 20px;
       }
     }
-.menu-btn {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 24px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  z-index: 1001;
-}
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  overflow-x: hidden;
-  transition: 0.3s;
-  padding-top: 60px;
-  z-index: 1000;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.sidenav iframe {
-  width: 100%;
-  height: calc(100% - 60px);
-  border: none;
-}
  
   </style>
 </head>
 <body>
  
 
-  <!-- Notes Button and Sidebar -->
-  <button class="menu-btn" onclick="openNotes()">☰</button>
 
-  <div id="notesPanel" class="sidenav">
-    <span class="closebtn" onclick="closeNotes()">&times;</span>
-
-     
-    <iframe src="https://Bushramemon.github.io/Portfolio/Introduction%20to%20Python.pdf"></iframe><<!-- Your PDF file --
-    
-  </div>
   
 
 
@@ -193,15 +146,7 @@
   <footer>
     &copy; 2025 Bushra. All rights reserved.
   </footer>
-<script>
-  function openNotes() {
-    document.getElementById("notesPanel").style.width = "80%";
-  }
 
-  function closeNotes() {
-    document.getElementById("notesPanel").style.width = "0";
-  }
-</script>
 
 </body>
 </html>
