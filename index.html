@@ -96,6 +96,50 @@
         margin: 20px;
         padding: 20px;
       }
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1000;
+  color: white; /* You can change this based on your background */
+}
+
+.dropdown-menu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  padding: 15px;
+  z-index: 999;
+  min-width: 200px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
+
+
+
+
+      
     }
 
  
@@ -151,7 +195,21 @@
   <!-- Footer -->
   <footer>
     &copy; 2025 Bushra. All rights reserved.
-  </footer>
+  </footer> 
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('dropdownMenu');
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+  }
+
+  document.addEventListener('click', function(event) {
+    const menu = document.getElementById('dropdownMenu');
+    const button = document.querySelector('.hamburger');
+    if (!menu.contains(event.target) && !button.contains(event.target)) {
+      menu.style.display = 'none';
+    }
+  });
+</script>
 
 
 </body>
